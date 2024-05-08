@@ -1,0 +1,26 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Update Books</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+
+    <input type="submit" value="update" class="btn btn-primary">
+
+
+ <!--   {% csrf_token %}
+
+    <label for="">Book Name</label>
+    <input type="text" name="title" placeholder="enter the book name" value="{{ book.title}}">
+
+    <label for="">Book Price</label>
+    <input type="text" name="price" placeholder="enter the book price" value="{{ book.price}}">
+
+    <input type="submit" value="update"> "IN VIEW.PY UPDATEBOOK CHANGED SO THIS ONE TOO....BASED ON FORM.PY  " -->
+{% endblock %}
